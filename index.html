@@ -3,16 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>My Newspaper</title>
+    <link rel="stylesheet" href="layout-newspaper.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #624dcb;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        article {
+            background: #fff;
+            justify-content: center;
+            text-align: center; 
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 15px;
+            flex: 1 1 calc(33% - 40px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 0;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <div class="profile-container">
-        <div class="profile-card">
-            <img src="istockphoto-165025406-170667a.jpg" alt="Your Name" class="profile-image">
-            <h2 class="profile-name">Deny Ahmad Hilmy</h2>
-            <p class="profile-description">Apa iyaa :).</p>
+
+    <header>
+        <div class="icon-medsos">
+            <a id="sosmed">Social Media</a>        
+            <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/ahmdhlmy_?igsh=b3JnY2hrNGc2NTl6&utm_source=qr" target="https://www.instagram.com/ahmdhlmy_?igsh=b3JnY2hrNGc2NTl6&utm_source=qr" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="http://www.youtube.com/@02_denyahmadhilmy92" target="http://www.youtube.com/@02_denyahmadhilmy92" title="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
         </div>
+    <div class="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
     </div>
+    <div class="language-switcher">
+        <button class="language-button" onclick="switchLanguage('en')">English</button>
+        <button class="language-button" onclick="switchLanguage('jp')">日本語 (Japanese)</button>
+    </div>
+    <div class="content" id="content">
+    <h1 id ="title">My Journey & Newspaper</h1>
+    <p id="description">Technology | Electrical | Control System | Oil and Gas</p>
+    </div>
+</header>
+
+<div class="container" class="content">
+    <article>
+        <h2 id="art1">Technology</h2>
+        <p id="art1des">Technology in several era.</p>
+        <img src="C:\Users\ASUS\Downloads\Coba\tech.jpg" alt="Placeholder Image 6">
+    </article>
+    <article>
+        <h2 id="art2">Electrical</h2>
+        <p id="art2des">Power Electrical and Digital Electronic.</p>
+        <img src="C:\Users\ASUS\Downloads\electrical.jpeg" alt="Placeholder Image 6">
+    </article>
+    <article>
+        <h2 id="art3">Control System</h2>
+        <p id="art3des">Automation | PLC | Micro Controller | SCADA.</p>
+        <img src="C:\Users\ASUS\Downloads\Coba\cs.jpg" alt="Placeholder Image 6">
+    </article>
+    <article>
+        <h2 id="art4">Oil and Gas</h2>
+        <p id="art4des">Information about Oil and Gas scope.</p>
+        <img src="C:\Users\ASUS\Downloads\Coba\oil.jpg" alt="Placeholder Image 6">
+    </article>
+    <article>
+        <h2 id="art5">Sports</h2>
+        <p id="art5des">Hiking | Running | Football | Futsal.</p>
+        <img src="C:\Users\ASUS\Downloads\hiking.jpg" alt="Placeholder Image 6">
+    </article>
+    <article>
+        <h2 id="art6">Another</h2>
+        <p id="artdes">Dolanan tok wi.</p>
+        <img src="C:\Users\ASUS\Downloads\Coba\travel.jpg">
+    </article>
+</div>
+
+<footer>
+    <p>&copy; 2024 Deny Ahmad Hilmy. All rights reserved.</p>   
+</footer>
+
+<script>
+    function switchLanguage(lang) {
+        const title = document.getElementById('title');
+        const description = document.getElementById('description');
+        const sosmed = document.getElementById('sosmed');
+
+        if (lang === 'en') {
+            title.textContent = 'My Journey & Newspaper';
+            description.textContent = 'Technology | Electrical | Control System | Oil and Gas.';
+            sosmed.textContent = 'Social Media |';
+            art1.textContent = 'Technology';
+            art2.textContent = 'Electrical';
+            art3.textContent = 'Control System';
+            art4.textContent = 'Oil and Gas';
+            art5.textContent = 'Sports';
+            art6.textContent = 'Another';
+
+        } else if (lang === 'jp') {
+            title.textContent = '私のウェブサイトへようこそ';
+            description.textContent = 'これは言語切り替えの簡単な例です。';
+            sosmed.textContent = 'ソーシャルメディア |';
+            art1.textContent = 'テクノロジー';
+            art1des.textContent = 'いくつかの時代のテクノロジー。';
+            art2.textContent = '電気';
+            art2des.textContent = '電力電気およびデジタル電子。';
+            art3.textContent = '制御システム';
+            art3des.textContent = 'オートメーション | PLC | マイクロコントローラ | SCADA';
+            art4.textContent =  '石油とガス';
+            art4des.textContent = '石油・ガスに関する情報';
+            art5.textContent = 'スポーツ';
+            art5des.textContent = 'ハイキング | ランニング | サッカー | フットサル';
+            art6.textContent = '別の';
+            art6des.textContent = 'ドラナン・トク・ウィ';
+        }
+    }
+</script>
+
 </body>
 </html>
