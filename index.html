@@ -4,206 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Newspaper</title>
-    <link rel="stylesheet" href="layout-newspaper.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #624dcb;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        article {
-            background: #fff;
-            justify-content: center;
-            text-align: center; 
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin: 10px;
-            padding: 15px;
-            flex: 1 1 calc(33% - 40px);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            font-size: 1.5em;
-            margin-top: 0;
-            text-align: center;
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #333;
-            color: #fff;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        /* Gaya untuk ikon sosial media */
-.social-links {
-    display: flex; /* Menyusun ikon secara horizontal */
-    gap: 20px; /* Memberikan jarak antar ikon */
-}
-
-.social-links a {
-    font-size: 30px; /* Ukuran ikon */
-    color: #333; /* Warna ikon */
-    text-decoration: none; /* Menghilangkan garis bawah pada link */
-}
-
-.social-links a:hover {
-    color: #007bff; /* Warna saat ikon dihover */
-}
-/* Gaya untuk ikon */
-.icons {
-    cursor: center; 
-    display: flex; /* Menyusun ikon secara horizontal */
-    gap: 15px; /* Memberikan jarak antar ikon */
-    /* Ukuran ikon dan efek hover */
-}
-.icons i {
-    font-size: 20px;
-    cursor: center; /* Menambahkan kursor pointer saat hover */
-    color: #333; /* Warna ikon */
-}
-
-/* Efek hover pada ikon */
-.icons i:hover {
-    cursor: center; 
-    color: #007bff; /* Mengubah warna ikon saat hover */
-}
-
-.icon-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between icons */
-    margin-top: 10px; /* Space between header text and icons */
-}
-.icon-container a {
-    color: white;
-    text-decoration: none;
-    font-size: 24px; /* Size of the icons */
-    transition: color 0.3s;
-}
-.icon-container a:hover {
-    color: #ddd; /* Change color on hover */
-}
-.icon-medsos {
-    display: flex;
-    justify-content: left;
-    text-align: left;
-    gap: 20px; /* Space between icons */
-    margin-top: 10px; /* Space between header text and icons */
-}
-.icon-medsos a {
-    color: white;
-    text-decoration: none;
-    font-size: 24px; /* Size of the icons */
-    transition: color 0.3s;
-}
-.icon-medsos a:hover {
-    color: #ddd; /* Change color on hover */
-}
-.menu {
-    justify-content: right;
-    position: absolute;
-    top: 20px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
-}
-.menu a {
-    color: white;
-    text-decoration: none;
-    margin-left: 15px; /* Space between menu items */
-    font-size: 16px; /* Size of the menu text */
-    transition: color 0.3s;
-    text-align: right;
-}
-.menu a:hover {
-    color: #ddd; /* Change color on hover */
-}
-img {
-    max-width: 100%; /* Make images responsive */
-    width: 500px; /* Set the width */
-    height: 200px; /* Set the height */
-    border-radius: 5px; /* Optional: add rounded corners */
-}
-p {
-    line-height: 1.6;
-    text-align: center;
-}
-article {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 15px;
-    flex: 1 1 calc(33% - 40px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.language-switcher {
-    margin: 20px 0;
-    text-align: center;
-}
-.language-button {
-    padding: 10px 20px;
-    margin: 0 5px;
-    cursor: pointer;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-.language-button:hover {
-    background-color: #0056b3;
-}
-.content {
-    text-align: center;
-    margin-top: 20px;
-}
-   @media (max-width: 600px) {
-            .language-button {
-                width: 100%; /* Full width on small screens */
-                margin: 5px 0; /* Stack buttons vertically */
-            }
-            header {
-                font-size: 1.5em; /* Larger header text on mobile */
-            }
-            .content h2 {
-                font-size: 1.2em; /* Smaller title on mobile */
-            }
-            .content p {
-                font-size: 0.9em; /* Smaller paragraph text on mobile */
-            }
-        }
-    </style>
 </head>
 <body>
 
-    <header>
-        <div class="icon-medsos">
-            <a id="sosmed">Social Media</a>        
-            <a href="https://www.instagram.com/ahmdhlmy_?igsh=b3JnY2hrNGc2NTl6&utm_source=qr" target="https://www.instagram.com/ahmdhlmy_?igsh=b3JnY2hrNGc2NTl6&utm_source=qr" title="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="http://www.youtube.com/@02_denyahmadhilmy92" target="http://www.youtube.com/@02_denyahmadhilmy92" title="YouTube">
-                <i class="fab fa-youtube"></i>
-            </a>
-        </div>
+<header>
+    <div class="icon-medsos">
+        <a id="sosmed">Social Media</a>
+        <a href="https://www.instagram.com/ahmdhlmy_" target="_blank" title="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="http://www.youtube.com/@02_denyahmadhilmy92" target="_blank" title="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
     <div class="menu">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -213,46 +31,46 @@ article {
         <button class="language-button" onclick="switchLanguage('jp')">日本語 (Japanese)</button>
     </div>
     <div class="content" id="content">
-    <h1 id ="title">My Journey & Newspaper</h1>
-    <p id="description">Technology | Electrical | Control System | Oil and Gas</p>
+        <h1 id="title">My Journey & Newspaper</h1>
+        <p id="description">Technology | Electrical | Control System | Oil and Gas</p>
     </div>
 </header>
 
-<div class="container" class="content">
+<div class="container">
     <article>
+        <img src="tech.jpg" alt="Technology">
         <h2 id="art1">Technology</h2>
         <p id="art1des">Technology in several era.</p>
-        <img src="tech.jpg" alt="Placeholder Image 6">
     </article>
     <article>
+        <img src="electrical.jpeg" alt="Electrical">
         <h2 id="art2">Electrical</h2>
         <p id="art2des">Power Electrical and Digital Electronic.</p>
-        <img src="electrical.jpeg" alt="Placeholder Image 6">
     </article>
     <article>
+        <img src="cs.jpg" alt="Control System">
         <h2 id="art3">Control System</h2>
         <p id="art3des">Automation | PLC | Micro Controller | SCADA.</p>
-        <img src="cs.jpg" alt="Placeholder Image 6">
     </article>
     <article>
+        <img src="oil.jpg" alt="Oil and Gas">
         <h2 id="art4">Oil and Gas</h2>
         <p id="art4des">Information about Oil and Gas scope.</p>
-        <img src="oil.jpg" alt="Placeholder Image 6">
     </article>
     <article>
+        <img src="hiking.jpg" alt="Sports">
         <h2 id="art5">Sports</h2>
         <p id="art5des">Hiking | Running | Football | Futsal.</p>
-        <img src="hiking.jpg" alt="Placeholder Image 6">
     </article>
     <article>
+        <img src="travel.jpg" alt="Another">
         <h2 id="art6">Another</h2>
-        <p id="artdes">Dolanan tok wi.</p>
-        <img src="travel.jpg">
+        <p id="art6des">Dolanan tok wi.</p>
     </article>
 </div>
 
 <footer>
-    <p>&copy; 2024 Deny Ahmad Hilmy. All rights reserved.</p>   
+    <p>&copy; 2024 Deny Ahmad Hilmy. All rights reserved.</p>
 </footer>
 
 <script>
