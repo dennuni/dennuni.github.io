@@ -1,22 +1,91 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+/* Gaya untuk ikon sosial media */
+.social-links {
+    display: flex; /* Menyusun ikon secara horizontal */
+    gap: 20px; /* Memberikan jarak antar ikon */
 }
-header {
-    background: #624dcb;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-    position: relative;
+
+.social-links a {
+    font-size: 30px; /* Ukuran ikon */
+    color: #333; /* Warna ikon */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
 }
-.container {
-    width: 90%;
-    margin: 20px auto;
+
+.social-links a:hover {
+    color: #007bff; /* Warna saat ikon dihover */
+}
+/* Gaya untuk ikon */
+.icons {
+    cursor: center; 
+    display: flex; /* Menyusun ikon secara horizontal */
+    gap: 15px; /* Memberikan jarak antar ikon */
+    /* Ukuran ikon dan efek hover */
+}
+.icons i {
+    font-size: 20px;
+    cursor: center; /* Menambahkan kursor pointer saat hover */
+    color: #333; /* Warna ikon */
+}
+
+/* Efek hover pada ikon */
+.icons i:hover {
+    cursor: center; 
+    color: #007bff; /* Mengubah warna ikon saat hover */
+}
+
+.icon-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    gap: 20px; /* Space between icons */
+    margin-top: 10px; /* Space between header text and icons */
+}
+.icon-container a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px; /* Size of the icons */
+    transition: color 0.3s;
+}
+.icon-container a:hover {
+    color: #ddd; /* Change color on hover */
+}
+.icon-medsos {
+    display: flex;
+    justify-content: left;
+    gap: 20px; /* Space between icons */
+    margin-top: 10px; /* Space between header text and icons */
+}
+.icon-medsos a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px; /* Size of the icons */
+    transition: color 0.3s;
+}
+.icon-medsos a:hover {
+    color: #ddd; /* Change color on hover */
+}
+.menu {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px; /* Space between menu items */
+    font-size: 16px; /* Size of the menu text */
+    transition: color 0.3s;
+}
+.menu a:hover {
+    color: #ddd; /* Change color on hover */
+}
+img {
+    max-width: 100%; /* Make images responsive */
+    width: 500px; /* Set the width */
+    height: 200px; /* Set the height */
+    border-radius: 5px; /* Optional: add rounded corners */
+}
+p {
+    line-height: 1.6;
+    text-align: center;
 }
 article {
     background: #fff;
@@ -26,30 +95,26 @@ article {
     padding: 15px;
     flex: 1 1 calc(33% - 40px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+}
+.language-switcher {
+    margin: 20px 0;
     text-align: center;
 }
-article img {
-    width: 100%;
-    height: auto;
+.language-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
     border-radius: 5px;
-    margin-bottom: 10px;
+    transition: background-color 0.3s;
 }
-h2 {
-    font-size: 1.5em;
-    margin-top: 0;
-    text-align: center;
+.language-button:hover {
+    background-color: #0056b3;
 }
-p {
-    line-height: 1.6;
+.content {
     text-align: center;
-}
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
     margin-top: 20px;
+
 }
